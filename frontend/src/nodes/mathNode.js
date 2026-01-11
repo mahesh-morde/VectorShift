@@ -1,4 +1,3 @@
-// frontend/src/nodes/mathNode.js
 import { useState, useEffect } from 'react';
 import { Position } from 'reactflow';
 import { BaseNode } from './BaseNode';
@@ -9,7 +8,6 @@ export const MathNode = ({ id, data }) => {
     const [op, setOp] = useState('add');
     const [result, setResult] = useState(0);
 
-    // The logic that "actually works"
     useEffect(() => {
         let r = 0;
         const n1 = parseFloat(num1) || 0;

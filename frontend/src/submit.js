@@ -1,9 +1,7 @@
-// frontend/src/submit.js
-import { useStore } from './store'; // Verify this path matches your project structure
+import { useStore } from './store';
 import { shallow } from 'zustand/shallow';
 
 export const SubmitButton = () => {
-    // 1. Get all nodes and edges from the React Flow store
     const { nodes, edges } = useStore(
         (state) => ({
             nodes: state.nodes,
@@ -14,7 +12,6 @@ export const SubmitButton = () => {
 
     const handleSubmit = async () => {
         try {
-            // 2. Send the data to the backend
             const response = await fetch('http://127.0.0.1:8000/pipelines/parse', {
                 method: 'POST',
                 headers: {
@@ -25,7 +22,6 @@ export const SubmitButton = () => {
 
             const data = await response.json();
 
-            // 3. Display the result nicely
             alert(`
                 Pipeline Analysis Results:
                 ---------------------------
@@ -45,8 +41,7 @@ export const SubmitButton = () => {
             <button
                 type="submit"
                 onClick={handleSubmit}
-                className="submit-button"
-            >
+                className="submit-button">
                 Submit Pipeline
             </button>
         </div>

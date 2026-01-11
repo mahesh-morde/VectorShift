@@ -1,4 +1,3 @@
-// frontend/src/nodes/dateNode.js
 import { useState, useEffect } from 'react';
 import { Position } from 'reactflow';
 import { BaseNode } from './BaseNode';
@@ -6,7 +5,6 @@ import { BaseNode } from './BaseNode';
 export const DateNode = ({ id, data }) => {
     const [time, setTime] = useState(new Date().toLocaleTimeString());
 
-    // Real-time clock logic
     useEffect(() => {
         const timer = setInterval(() => {
             setTime(new Date().toLocaleTimeString());
