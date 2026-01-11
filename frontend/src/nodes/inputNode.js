@@ -1,4 +1,3 @@
-// frontend/src/nodes/inputNode.js
 import { useState } from 'react';
 import { Position } from 'reactflow';
 import { BaseNode } from './BaseNode';
@@ -28,8 +27,7 @@ export const InputNode = ({ id, data }) => {
         <select
           value={inputType}
           onChange={(e) => setInputType(e.target.value)}
-          className="nodrag"
-        >
+          className="nodrag">
           <option value="Text">Text</option>
           <option value="File">File</option>
         </select>
