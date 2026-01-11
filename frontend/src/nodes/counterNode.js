@@ -1,4 +1,3 @@
-// frontend/src/nodes/counterNode.js
 import { useState } from 'react';
 import { Position } from 'reactflow';
 import { BaseNode } from './BaseNode';
@@ -7,9 +6,7 @@ export const CounterNode = ({ id, data }) => {
     const [count, setCount] = useState(0);
 
     const handles = [
-        // ADDED THIS: A target handle on the left to accept connections
         { type: 'target', position: Position.Left, id: 'input' },
-        // Existing source handle on the right
         { type: 'source', position: Position.Right, id: 'count' }
     ];
 
